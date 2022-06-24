@@ -15,7 +15,7 @@
         android:layout_height="79dp"
         android:fontFamily="sans-serif"
         android:onClick="resetAndToast"
-        android:text="@string/toast"
+        android:text="@string/reset"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"

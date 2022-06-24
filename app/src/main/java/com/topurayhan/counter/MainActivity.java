@@ -26,14 +26,18 @@ public class MainActivity extends AppCompatActivity {
         TextView text = findViewById(R.id.counterText);
         counter = 0;
         text.setText(Integer.toString(counter));
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(15);
     }
 
     @SuppressLint("SetTextI18n")
     public void incrementCounter(View view) {
         TextView text = findViewById(R.id.counterText);
         counter++;
-        if (counter < 1000) {
+        if (counter < 100) {
             text.setText(Integer.toString(counter));
+            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            vibrator.vibrate(15);
         } else {
             Toast.makeText(getApplicationContext(), "Maximum reached! Reset to start again.", Toast.LENGTH_SHORT).show();
             Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
