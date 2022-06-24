@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public void incrementCounter(View view) {
         TextView text = findViewById(R.id.counterText);
         counter++;
-        if (counter < 100) {
+        if (counter < 1000) {
             text.setText(Integer.toString(counter));
             Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(15);
